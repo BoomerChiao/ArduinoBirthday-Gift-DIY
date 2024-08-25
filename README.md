@@ -37,12 +37,12 @@ Install Arduino software
    - 選擇你要製作的專案並直接開啟即可開始使用。
 
 
-##  Prepare Electronic Materials（準備電子材料）
+##  Prepare Electronic Materials　（準備電子材料）
 1. Arduino Pro Mini (5V/16M)
-2. FTDI USB to TTL (3.3V and 5V)
+2. USB to UART Adapter (FTDI or CP2102)
 3. TFT LCD Display Module (Icstation 1.8 Inch TFT LCD Screen 128x160 ST7735)
 4. CDS (5mm)
-5. Wire
+5. Jumper Wires
 
 ##  Pin wiring　（引腳接線）
 If you’re using a different Arduino board, make sure you check the correct I2C pins:
@@ -51,5 +51,16 @@ If you’re using a different Arduino board, make sure you check the correct I2C
 - MEGA: SDA (20) ; SCL (21)
 - Leonardo: SDA (20) ; SCL (21)
 
+
+##  Arduino Pro or Pro Mini USB to UART Hookup Guide
+The Arduino Pro Mini and Arduino Pro are compact, low-power versions of the Arduino board. To program these boards or communicate with them via a computer, you'll need a USB-to-UART (Universal Asynchronous Receiver/Transmitter) adapter.
+
+1. Steps to Connections
+   - USB-to-UART Adapter VCC → Arduino Pro Mini VCC
+     - USB-to-UART Adapter Pins Connect to Arduino Pro Mini VCC (make sure it matches the voltage of your Pro Mini)
+   - USB-to-UART Adapter GND → Arduino Pro Mini GND
+   - USB-to-UART Adapter TX → Arduino Pro Mini RX
+   - USB-to-UART Adapter RX → Arduino Pro Mini TX
+   - USB-to-UART Adapter DTR → Arduino Pro Mini DTR
 
 
