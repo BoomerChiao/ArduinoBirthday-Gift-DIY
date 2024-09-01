@@ -50,11 +50,20 @@ Install Arduino software
 
 
 ##  Pin wiring　（引腳接線）
-If you’re using a different Arduino board, make sure you check the correct I2C pins:
+![image](https://github.com/user-attachments/assets/1d3c04b3-3e06-437b-8f94-deda1391ddac)
+⬆The above diagram shows the pin connection schematic.
 
-- Uno R3、Nano: SDA (A4) ; SCL (A5)
-- MEGA: SDA (20) ; SCL (21)
-- Leonardo: SDA (20) ; SCL (21)
+- Please note that the LCD supports only a 3.3 ~ 5V voltage. Therefore, it is recommended to set the VCC to be powered by a 5V supply.
+- The quantity of photoresistors can be adjusted according to specific requirements, with support for up to 3 units.
+- The TOUCH button A0 is a Jumper wire.
+
+###  中文
+- 請注意，該 LCD 僅持支援 3.3 ~ 5V 電壓範圍。因此，建議將 VCC 預設為 5V 電源以確保正常運作。
+- 光敏電阻數量可以根據具體需求進行調整。（最多支援 3 顆）
+- 觸控按鈕 (TOUCH) A0是一根跳線。
+
+##  Program Code　（程式代碼）
+ABCD
 
 
 ##  Arduino Pro or Pro Mini USB to UART Hookup Guide　（Arduino Pro、Pro Mini USB 燒入連接指南）
