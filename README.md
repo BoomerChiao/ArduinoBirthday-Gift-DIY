@@ -65,6 +65,23 @@ Install Arduino software
 ##  Program Code　（程式代碼）
 This project utilizes online-provided code libraries for management and display. To ensure that the code runs correctly, please install the 「Adafruit ST7735 and ST7789 Library」 and 「ADCTouch」 in advance.
 
+
+This code provides three different programming approaches. You can choose the most suitable option based on your needs to develop your final product. Below is an overview of the differences between each code option:
+1. Arduino_TFT：
+   - Features: Provides basic TFT display animation technology and ADCTouch interaction.
+   - Use Case: Suitable for applications that require basic display and touch functionalities.
+  
+2. Arduino_TFT_CDS：
+   - Features: Builds on the basic TFT display animation and ADCTouch interaction, with the addition of a Light Dependent Resistor (CDS) to detect ambient light levels and automatically adjust the display's on/off state.
+   - Use Case: Ideal for applications that require ambient light detection and automatic display control.
+  
+3. Arduino_TFT_CDS_CPUandReset：
+   - Features: Expands upon the basic TFT display animation and ADCTouch interaction by incorporating a CDS sensor to detect ambient light and automatically control the display's power state. Additionally, when the display is off, the system activates a low-power CPU mode to extend battery life.
+   - Use Case: Suitable for applications requiring light detection, automatic display control, and power-saving features.
+
+You can download the code from the following link：https://github.com/BoomerChiao/ArduinoBirthday-Gift-DIY/tree/main/Code
+
+###  中文
 本次專題採用了網上提供程式數據庫進行管理和顯示，為了確保代碼能夠正確運行，請事先安裝以下程式庫：
 1. Adafruit ST7735 Library
    - 用途：提供 ST77xx TFT 顯示模組的控制支持。
@@ -84,22 +101,6 @@ This project utilizes online-provided code libraries for management and display.
      ![image](https://github.com/user-attachments/assets/7dda2b88-075f-4a16-aae9-f2e9e460dbb9)
 
 
-This code provides three different programming approaches. You can choose the most suitable option based on your needs to develop your final product. Below is an overview of the differences between each code option:
-1. Arduino_TFT：
-   - Features: Provides basic TFT display animation technology and ADCTouch interaction.
-   - Use Case: Suitable for applications that require basic display and touch functionalities.
-  
-2. Arduino_TFT_CDS：
-   - Features: Builds on the basic TFT display animation and ADCTouch interaction, with the addition of a Light Dependent Resistor (CDS) to detect ambient light levels and automatically adjust the display's on/off state.
-   - Use Case: Ideal for applications that require ambient light detection and automatic display control.
-  
-3. Arduino_TFT_CDS_CPUandReset：
-   - Features: Expands upon the basic TFT display animation and ADCTouch interaction by incorporating a CDS sensor to detect ambient light and automatically control the display's power state. Additionally, when the display is off, the system activates a low-power CPU mode to extend battery life.
-   - Use Case: Suitable for applications requiring light detection, automatic display control, and power-saving features.
-
-You can download the code from the following link：https://github.com/BoomerChiao/ArduinoBirthday-Gift-DIY/tree/main/Code
-
-###  中文
 該代碼提供3種不同的程式方式，你可以根據需求選擇最適合的方式來製作你的最終產品。以下是每種程式碼選項的差異介紹：
 1. Arduino_TFT：
    - 功能：提供基本的 TFT 顯示動畫技術和 ADCTouch 觸控互動。
@@ -137,6 +138,56 @@ Picture from：https://www.b4x.com/android/forum/threads/how-to-connect-an-ardui
    - Check Connections： Ensure all wires are connected securely and to the correct pins.
    - Verify Voltage： Make sure the VCC connection matches the voltage requirements of your Pro Mini.
    - Auto-reset： If uploading code fails, try manually pressing the reset button on the Pro Mini just before uploading.
+
+##  Advanced Design　（進階設計）
+To simplify the electronic manufacturing process, we employed the printed etch resist method to handle complex and difficult-to-connect circuits. This approach not only significantly reduces the risk of incorrect connections but also ensures the effective operation of the product.
+
+Therefore, we utilized the PCB manufacturing services provided by EasyEDA to successfully address the challenges of printed circuit design for this project.
+
+為了簡化電子製作過程，我們採用了印刷蝕刻阻劑工法來處理複雜且難以連接的線路。這樣不僅能大幅度降低錯誤連接的風險，還能確保產品的有效運作。
+
+因此，我們利用了EasyEDA提供的PCB製造服務，成功解決了此專案中的印刷電路設計挑戰。
+
+You can obtain the PCB layout from the following link（你可以從以下鏈獲得PCB layout）：https://oshwlab.com/chiaochieh/dinotaeng_gift_2024-06-04_21-21-12
+
+###  Circuit Design （電路設計）
+   ![image](https://github.com/user-attachments/assets/f8fb6b8f-ee32-4771-b76b-f581a9099965)
+
+###  PCB layout （電路布局）
+   ![image](https://github.com/user-attachments/assets/6dacfbe7-0164-4de9-ac92-e93e31d596f3)
+
+###  PCB Prepare Electronic Materials　（PCB準備電子材料）
+1. SMD MLCC 
+   - C1、C4、C8：100nF-1206
+   - C2、C3、C7、C9：10uF-1206
+   - C5：47uf-50v or 100uf-25v or N/A
+
+2. SMD Resistors
+   - R1：130Ω-1206
+   - R2：390Ω-1206
+   - R3、R4：5.1KΩ-1206
+   - R5、R6、R7：GL7537 or 5mm_CDS
+   - R8、R9、R10：1KΩ-1206
+   - F1：TLC-MSMD160/6 or 0Ω-1812
+
+3. DIP Connectors 
+   - P1、P2、P4：N/A
+   - P3：2.54mm Plugin Straight Headers Connector 2x7P、1x10P、1x10P
+   - P5：2.54mm Plugin 8P Straight 1x8P Headers Connector
+   - P6、P7：2.54mm Plugin 3P Straight 1x3P Pin Headers or 3P slide switch
+   - P8：2.54mm Plugin 2P Straight 1x2P Pin Headers
+
+4. SMD Active component
+   - D1：SS34 (SMA) or 1N4007_SMD (M7 or SMA)
+   - U1：AMS1117-ADJ
+   - U2：AMS1117-3.3
+   - TVS：SMBJ5.0CA or N/A
+
+5. Power Connector
+   - USB：KH-TYPE-C-6P-T or SMD TYPE C 6P
+   - DC:XDJK-0051-025 or DIP DC Power Connectors (2.1mm 6.3mm)
+
+###  3D casing （3D外殼）
 
 ##  Product Showcase　（成品展示）
 
