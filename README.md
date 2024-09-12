@@ -148,7 +148,7 @@ Therefore, we utilized the PCB manufacturing services provided by EasyEDA to suc
 
 因此，我們利用了EasyEDA提供的PCB製造服務，成功解決了此專案中的印刷電路設計挑戰。
 
-You can obtain the PCB layout from the following link（你可以從以下鏈獲得PCB layout）：https://oshwlab.com/chiaochieh/dinotaeng_gift_2024-06-04_21-21-12
+You can obtain the PCB layout from the following link（你可以從下鏈結獲得PCB layout）：https://oshwlab.com/chiaochieh/dinotaeng_gift_2024-06-04_21-21-12
 
 ###  Circuit Design （電路設計）
    ![image](https://github.com/user-attachments/assets/f8fb6b8f-ee32-4771-b76b-f581a9099965)
@@ -189,7 +189,32 @@ You can obtain the PCB layout from the following link（你可以從以下鏈獲
 
 ###  3D casing （3D外殼）
 
+![image](https://github.com/user-attachments/assets/46eb9d24-2803-4e14-b2f4-f5b0bc8a3bfe)
+
+You can obtain the 3D printed shell from the following link（你可以從下鏈結獲得3D外殼）：
+https://www.thingiverse.com/thing:6763818
+
 ##  Product Showcase　（成品展示）
+
+
+![image](https://github.com/user-attachments/assets/981b7964-737c-4f87-aaab-ac23d06cfd18)
+![image](https://github.com/user-attachments/assets/c8b9045f-4fcf-4c2c-9954-799c94b0b779)
+![image](https://github.com/user-attachments/assets/f60a7f4d-556b-4f8e-b710-8f9460fe9802)
+![image](https://github.com/user-attachments/assets/6be23b37-62ef-46d3-9a76-d7e9f687e59d)
+![image](https://github.com/user-attachments/assets/25cf70a7-8290-408d-b0cc-86edcd7233fe)
+![image](https://github.com/user-attachments/assets/63a59b01-d2ef-451e-8b4d-57900d4acc7e)
+
+![image](https://github.com/user-attachments/assets/1e39848d-2c2c-4f4a-b514-ede1751e7830)
+![image](https://github.com/user-attachments/assets/4fdb6f58-0eca-47c9-b1f8-b199e814091b)
+![image](https://github.com/user-attachments/assets/8d98de70-7152-4215-ace1-77d6e21763f2)
+
+
+
+![image](https://github.com/user-attachments/assets/49c7d621-d4a3-4d11-b0be-570aec29c961)
+
+
+
+
 
 ##  References　（參考資料）
 1. https://www.arduino.cc/en/software
