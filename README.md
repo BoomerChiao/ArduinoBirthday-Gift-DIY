@@ -202,8 +202,11 @@ You can obtain the PCB layout from the following link（你可以從下鏈結獲
    - DC:XDJK-0051-025 or DIP DC Power Connectors (2.1mm 6.3mm)
 
 ###  3D casing （3D外殼）
-
+To facilitate wiring and prevent cable damage, the V1 version includes dedicated cable routing openings.
+（為了提高布線的便利性並減少線材損壞的風險，V1版本設計了專用的走線開口。）
 ![image](https://github.com/user-attachments/assets/46eb9d24-2803-4e14-b2f4-f5b0bc8a3bfe)
+![image](https://github.com/user-attachments/assets/21c72aa3-71f2-4036-935d-d35dd0feae11)
+
 
 You can obtain the 3D printed shell from the following link（你可以從下鏈結獲得3D外殼）：
 https://www.thingiverse.com/thing:6763818
