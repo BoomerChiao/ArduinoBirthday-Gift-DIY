@@ -15,8 +15,9 @@
 #define TFT_RST  9 // TFT Reset
 
 int walk=0,Gift_X,Gift_Y,time_sun_moon; 
-int CDS_A,CDS_B,CDS_C,CDS_Time=0 ,TFT_sleep=75; //CDS
+int CDS_A,CDS_B,CDS_C,CDS_Time=0 ,TFT_sleep=75; //CDS The higher the value, the stronger the light source required.
 int TOUCH_A0;     //reference values to remove offset
+int walk_delay=100; //Modify the timing of the steps
 bool Gift_bool = false , sun_moon=false , TFT_sleep_bool=true;   //true,false
 
 Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);
@@ -111,13 +112,15 @@ void Quokka_BOBO_display(void)
   tft.drawRGBBitmap(walk+36, 60,DB, 20, 13);
   //tft.drawRGBBitmap(walk+37, 71,DC, 18, 14);
   tft.drawRGBBitmap(walk+37, 73,DD, 18, 14);
-  delay(230);
+  //delay(230);
+  delay(walk_delay);
 
 /*tft.drawRGBBitmap(walk+11, 71,BD, 26, 16);
   tft.drawRGBBitmap(walk+37, 71,DD, 18, 14);*/
   tft.drawRGBBitmap(walk+11, 71,BC, 26, 16);
   tft.drawRGBBitmap(walk+37, 73,DC, 18, 14);
-  delay(230);
+  //delay(230);
+  delay(walk_delay);
   tft.fillRect(walk+0, 39, 11, 48,0x6358);
   walk=walk+8;
   //tft.fillRect(walk+31, 58, 10, 13,ST77XX_BLACK);
@@ -131,7 +134,7 @@ void sun_moon_display(void)
   
   if(time_sun_moon>60)
   {
-    time_sun_moon=-59  ;
+    time_sun_moon=-10  ;
     if(sun_moon == false)
     {
       sun_moon = true;
@@ -151,12 +154,12 @@ void sun_moon_display(void)
     //tft.drawRGBBitmap(Gift_X, Gift_Y+88,Gift, 16, 7);
     tft.fillCircle(Gift_X, Gift_Y, 1, ST77XX_WHITE); 
     //tft.drawRGBBitmap(time_sun_moon*2.7-10, 3,sun_moon_B, 11, 22);
-    tft.drawRGBBitmap(time_sun_moon*2.7+0, 3,sun_moon_B, 22, 22);
+    tft.drawRGBBitmap(time_sun_moon*2.7, 3,sun_moon_B, 22, 22);
   }
   else
   {
     //tft.fillRect(0, 3, 160, 24,0x6358);
-    tft.drawRGBBitmap(time_sun_moon*2.7+0, 3,sun_moon_A, 22, 22);
+    tft.drawRGBBitmap(time_sun_moon*2.7, 3,sun_moon_A, 22, 22);
   }
 }
 
