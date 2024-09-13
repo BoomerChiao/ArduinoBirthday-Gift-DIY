@@ -17,7 +17,7 @@
 int walk=0,Gift_X,Gift_Y,time_sun_moon; 
 int CDS_A,CDS_B,CDS_C,CDS_Time=0 ,TFT_sleep=75; //CDS The higher the value, the stronger the light source required.
 int TOUCH_A0;     //reference values to remove offset
-int walk_delay=100; //Modify the timing of the steps
+int walk_delay=230; //Modify the timing of the steps
 bool Gift_bool = false , sun_moon=false , TFT_sleep_bool=true;   //true,false
 
 Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);
