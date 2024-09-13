@@ -118,9 +118,23 @@ You can download the code from the following link：https://github.com/BoomerChi
 
 .
 
-PS. 其他安裝Library
+P.S. 其他安裝Library
    - 打開 Arduino IDE 點擊「sketch」 > 「程式庫」 > 「加入.Zip程式庫...」。
    - 搜尋 已下載Zip程式庫 ，點擊 「開啟」 按鈕。
+
+P.S. Code is customizable （可自定義代碼）
+![image](https://github.com/user-attachments/assets/f51b48c2-0eec-47df-bbce-cae0c31cd743)
+1. (TFT_sleep=75) This parameter sets the brightness threshold for the light-dependent resistor (CDS) to determine the on/off state of the display (TFT). 
+（參數用於設定光敏電阻 (CDS) 的亮度閾值，以決定顯示器 (TFT) 的開關狀態。）
+
+   - A higher value indicates that a greater ambient light level is required to keep the display on, meaning the display will stay on in bright conditions. Conversely, a lower value will cause the display to remain on even in lower light conditions.
+     （數值越大，表示所需的環境亮度越高，顯示器在光線充足時將保持開啟；數值越小，則顯示器在光線較弱時也會開啟。）
+   - If the parameter is set to -1, the light-dependent resistor (CDS) is disabled, and the display will remain on at all times.
+     （若參數設定為 -1，則光敏電阻 (CDS) 會被禁用，顯示器將始終保持開啟狀態。）
+
+3. (walk_delay=230) This parameter adjusts the delay time for character movement. A smaller value results in faster movement, while a larger value slows down the movement.
+   （參數用於調整人物行走的延遲時間。數值越小，人物行走的速度越快；數值越大，人物行走的速度則越慢。）
+
 
 ##  Arduino Pro or Pro Mini USB to UART Hookup Guide　（Arduino Pro、Pro Mini USB 燒入連接指南）
 The Arduino Pro Mini and Arduino Pro are compact, low-power versions of the Arduino board. To program these boards or communicate with them via a computer, you'll need a USB-to-UART (Universal Asynchronous Receiver/Transmitter) adapter.
